@@ -49,7 +49,9 @@ class ViewController1: UIViewController {
         UIDevice.current.isProximityMonitoringEnabled = false
         NotificationCenter.default.removeObserver(self)
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // ...
+    }
     // 思路同 touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         // 晃动开始

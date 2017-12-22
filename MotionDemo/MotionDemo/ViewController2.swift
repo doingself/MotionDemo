@@ -62,7 +62,7 @@ class ViewController2: UIViewController {
         super.viewWillAppear(animated)
         
         // MARK: core motion
-        // 加速器 使用push方式 (摇一摇)
+        // 加速器 使用push方式
         guard motionManager.isAccelerometerAvailable else{
             // 设备不支持 加速器
             self.accelerationLab.text = "不支持 加速"
@@ -83,7 +83,7 @@ class ViewController2: UIViewController {
                 self.accelerationLab.text = str
             }
         }
-        // 陀螺仪 使用pull方式主动获取 (页面中弹球)
+        // 陀螺仪 使用pull方式主动获取
         // 参数同上 motionManager.isGyroAvailable
         motionManager.startGyroUpdates()
         if let gyroData = motionManager.gyroData{
