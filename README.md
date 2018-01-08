@@ -1,6 +1,22 @@
 # MotionDemo
 CoreMotion 简单使用
 
+```
+// target —> buildSettings —> swift flag —> Debug -> -D DEBUG
+// 在项目中实现：#if DEBUG    #endif
+// 这里 T 表示不指定 message参数类型
+func SYCLog<T>(_ msg: T, filePath: String = #file, methodName: String = #function, lineNumber: Int = #line, columnNumber: Int = #column){
+    
+    #if DEBUG
+        
+        let fileName = (filePath as NSString).lastPathComponent.replacingOccurrences(of: ".swift", with: "")
+        
+        print("\n\t \(fileName).\(methodName):(\(lineNumber):\(columnNumber)) - \(msg)")
+        
+    #endif
+}
+```
+
 ## 距离传感器（非motion）
 ```
 // 打开传感器
