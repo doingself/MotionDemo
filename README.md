@@ -82,3 +82,8 @@ if let gyroData = motionManager.gyroData{
 ## 其他
 
 弹球
+
+# Requirements
++ Swift 4
++ iOS 10+
++ Xcode 9+
